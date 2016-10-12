@@ -94,17 +94,6 @@ class Servo_x61
 	uint8_t attach(int);
     
     /**
-     Attach the given pin to the next free channel. Sets pinMode(..).
-     The attached servo is pulsed with the DEFAULT_PW value.
-     Allows overriding the min and max pulse width values.
-     @param int Pin number to which the servo is attached.
-     @param int Override minimum pulse width in microseconds.
-     @param int Override maximum pulse width in microseconds.
-     @return Channel number or 0 of there was a failure.
-     */
-	uint8_t attach(int, int, int);
-    
-    /**
      Deactivates the servo. This cuts power to the servo motor.
      */
     void detach();
