@@ -83,7 +83,7 @@ class Servo_x61
   public:
     
 	/** Constructor. */
-	Servo_x61();
+    Servo_x61();
 
     /**
      Attach the given pin to the next free channel. Sets pinMode(..).
@@ -91,7 +91,7 @@ class Servo_x61
      @param int Pin number to which the servo is attached.
      @return channel number or 0 if there was a failure.
      */
-	uint8_t attach(int);
+    uint8_t attach(int);
     
     /**
      Deactivates the servo. This cuts power to the servo motor.
@@ -99,12 +99,16 @@ class Servo_x61
     void detach();
     
     /**
-     Set the new position value or pulse width for this servo.
-     If parameter value is < MAX_POS then it is treated as a position.
-     Otherwise it is treated as pulse width in microseconds.
-     @param int Position or pulse width.
+     Set the new servo position value (in degrees).
+     @param int New servo position (in degrees).
      */
     void write(int);
+    
+    /**
+     Set the servo position by adjusting the pulse width directly.
+     @param int Pulse width in microseconds.
+     */
+    void writeMicroseconds(int);
     
     /**
      Returns the current pulse width for this servo.
@@ -116,7 +120,7 @@ class Servo_x61
      Checks if this servo is attached and active.
      @return True if the servo is attached, False otherwise.
      */
-	boolean attached();
+    boolean attached();
     
  private:
     

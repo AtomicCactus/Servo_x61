@@ -170,13 +170,22 @@ void Servo_x61::detach()
     servos[this->channelIndex].pin.isActive = false;
 }
 
-void Servo_x61::write(int pw)
+void Servo_x61::write(int angle)
 {
-    int adjustedPw = pw;
-    if (pw <= MAX_POS) {
-        adjustedPw = map(pw, MIN_POS, MAX_POS, MIN_PW, MAX_PW);
+    if (angle > MAX_POS)
+    {
+        angle = MAX_POS;
     }
-    writeChannel(this->channelIndex, adjustedPw);
+    else if (angle < MIN_POS)
+    {
+        angle = MIN_POS;
+    }
+    writeChannel(this->channelIndex, map(angle, MIN_POS, MAX_POS, MIN_PW, MAX_PW));
+}
+
+void Servo_x61::writeMicroseconds(int pw)
+{
+    writeChannel(this->channelIndex, pw);
 }
 
 int Servo_x61::read()
