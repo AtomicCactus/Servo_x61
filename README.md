@@ -4,8 +4,8 @@ Timer1 interrupt driven servo library for Atmel ATTiny x61 series microcontrolle
 ## Usage
 
 The public interface is meant to mirror the [Arduino Servo library](https://www.arduino.cc/en/Reference/Servo).
-The `write(int)` function allows you to pass in either a position (in degrees form 0 to 180).
-To set pulse width (in microseconds between 1000 and 5500) use the `writeMicroseconds(int)` function.
+
+### Example
 
 ```
 #include "Servo_x61.h"
