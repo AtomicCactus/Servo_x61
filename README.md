@@ -1,5 +1,5 @@
 # Servo_x61
-Timer1 interrupt driven servo library for Atmel ATTiny x61 series microcontrollers. Adapted from [ServoTimer2](https://github.com/nabontra/ServoTimer2) library. This library uses Timer1 hardware interrupt to control up to 8 servos using an ATTiny x61 series microcontroller. It is compatible with [ATTinyCore](https://github.com/SpenceKonde/ATTinyCore).
+Timer1 (8 bit) interrupt driven servo library for Atmel ATTiny x61 series microcontrollers. Adapted from [ServoTimer2](https://github.com/nabontra/ServoTimer2) library. This library uses Timer1 hardware interrupt to control up to 8 servos using an ATTiny x61 series microcontroller. It is compatible with [ATTinyCore](https://github.com/SpenceKonde/ATTinyCore).
 
 ## Usage
 
